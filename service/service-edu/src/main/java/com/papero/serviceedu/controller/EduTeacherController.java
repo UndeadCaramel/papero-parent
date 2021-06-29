@@ -26,7 +26,7 @@ import java.util.List;
  * @since 2021-04-18
  */
 @RestController
-@RequestMapping("/serviceedu/edu-teacher")
+@RequestMapping("/eduservice/edu-teacher")
 @CrossOrigin
 @Api(value  = "讲师接口",tags = "用户操作接口")
 public class EduTeacherController {
