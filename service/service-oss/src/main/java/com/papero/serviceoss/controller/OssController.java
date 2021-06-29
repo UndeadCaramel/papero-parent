@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping("/serviceoss")
+@RequestMapping("/eduoss")
 @Api(value="阿里云oss")
 public class OssController  {
 
