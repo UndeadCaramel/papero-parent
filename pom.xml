@@ -27,6 +27,7 @@
 		<aliyun.oss.version>3.10.2</aliyun.oss.version>
 		<jodatime.version>2.10.1</jodatime.version>
 		<lombok.version>1.18.20</lombok.version>
+		<poi.version>3.17</poi.version>
 	</properties>
 	<dependencyManagement>
 	<dependencies>
@@ -69,6 +70,17 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>${lombok.version}</version>
+		</dependency>
+		<!--excel操作类-->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi.version}</version>
 		</dependency>
 
     </dependencies>
