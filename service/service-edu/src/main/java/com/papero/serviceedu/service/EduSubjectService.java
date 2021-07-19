@@ -2,7 +2,10 @@ package com.papero.serviceedu.service;
 
 import com.papero.serviceedu.entity.EduSubject;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.papero.serviceedu.entity.vo.SubjectTree;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 /**
  * <p>
@@ -15,5 +18,8 @@ import org.springframework.web.multipart.MultipartFile;
 public interface EduSubjectService extends IService<EduSubject> {
 
     void saveSubjects(MultipartFile multipartFile);
+
+    List<SubjectTree> querySubjectTree();
+
 
 }

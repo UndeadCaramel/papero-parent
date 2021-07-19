@@ -1,14 +1,21 @@
 package com.papero.serviceedu.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.papero.commonutils.R;
+import com.papero.serviceedu.entity.EduSubject;
+import com.papero.serviceedu.entity.vo.SubjectQuery;
+import com.papero.serviceedu.entity.vo.SubjectTree;
 import com.papero.serviceedu.service.EduSubjectService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiParam;
+import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 /**
  * <p>
@@ -30,6 +37,12 @@ public class EduSubjectController {
     public R addSubject(@RequestPart MultipartFile multipartFile){
         eduSubjectService.saveSubjects(multipartFile);
         return R.ok();
+    }
+
+    @GetMapping(value="querySubject")
+    public R querySubject(){
+        List<SubjectTree> list=eduSubjectService.querySubjectTree();
+        return R.ok().data("list",list);
     }
 
 }
