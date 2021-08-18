@@ -34,7 +34,7 @@ public class EduSubjectController {
     private EduSubjectService eduSubjectService;
 
     @PostMapping(value="addSubject", headers = "content-type=multipart/form-data")
-    public R addSubject(@RequestPart MultipartFile multipartFile){
+    public R addSubject(@RequestPart("file") MultipartFile multipartFile){
         eduSubjectService.saveSubjects(multipartFile);
         return R.ok();
     }
